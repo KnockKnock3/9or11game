@@ -16,11 +16,20 @@ questions_total = questions.length
 document.getElementById("question_text").innerHTML = questions[question_count].question
 
 function process_answer(answer) {
+
     if (questions[question_count].answer == answer) {
         questions_correct += 1
     }
 
     question_count += 1
+
+    if (question_count >= questions_total) {
+        document.getElementById("question_text").innerHTML = "End"
+        document.getElementById("percentage").innerHTML = Math.round(100 * questions_correct/questions_total) + "%"
+        document.getElementById("9_button").style.display = "none"
+        document.getElementById("11_button").style.display = "none"
+        return
+    }
 
     document.getElementById("question_text").innerHTML = questions[question_count].question
     document.getElementById("question_number").innerHTML = "Question " + (question_count + 1)

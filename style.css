@@ -1,3 +1,11 @@
+.roboto {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -18,13 +26,24 @@ body {
     justify-items: center;
 }
 
+
+
 #header {
-    width: 100%;
+    width: 90%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     justify-items: stretch
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+#question_text {
+    text-align: center;
+    font-size: 3rem;
 }
 
 #buttons {
@@ -42,10 +61,10 @@ body {
     background-color: #a259ff;
     color: white;
     border: none;
-    width: 140px;
-    height: 140px;
+    width: max(150px, min(18vh, 18vw));
+    height: max(150px, min(18vh, 18vw));
     border-radius: 50%;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
     cursor: pointer;
     margin: 15px;

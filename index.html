@@ -7,18 +7,22 @@
 
     <link rel="stylesheet" href="style.css"></link>
     <script defer src="script.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&subset=latin&display=swap" rel="stylesheet" rel="preload">
 </head>
 <body>
     <div id="container">
         <div id="header">
-            <p id="question_number">Question 1</p>
-            <p id="percentage">100%</p>
+            <p id="question_number" class="roboto">Question 1</p>
+            <p id="percentage" class="roboto">0%</p>
         </div>
-        <h1 id="question_text">Question</h1>
+        <h1 id="question_text" class="roboto">Loading...</h1>
 
         <div id="buttons">
-            <button id="9_button", class="answer_button", onclick="nine_button_clicked()">9</button>
-            <button id="11_button", class="answer_button", onclick="eleven_button_clicked()">11</button>
+            <button id="9_button" class="answer_button roboto" onclick="nine_button_clicked()">9</button>
+            <button id="11_button" class="answer_button roboto" onclick="eleven_button_clicked()">11</button>
         </div>
     </div>
 </body>
