@@ -1,12 +1,27 @@
 const questions = [
-    { question: "What is 3 × 3?", answer: 9 },
-    { question: "What is the square root of 121?", answer: 11 },
-    { question: "How many players are on a football (soccer) team?", answer: 11 },
-    { question: "What is 81 ÷ 9?", answer: 9 },
-    { question: "What is 5 + 4?", answer: 9 },
-    { question: "What is 15 - 4?", answer: 11 },
-    { question: "How many sides does a nonagon have?", answer: 9 },
-    { question: "What is 99 ÷ 9?", answer: 11 }
+
+    // Geo-politial questions
+    { question: "How many time zones is the US and its dependencies divided into?", answer: 9 },
+    { question: "How many provinces in South Africa?", answer: 9 },
+    { question: "How long is the Turkey-Azerbaijan border (miles)?", answer: 11 },
+
+    // Navy questions
+    { question: "How many aircraft carriers does the US Navy operate?", answer: 11 },
+    { question: "How many submarines does the Royal Navy operate?", answer: 9 },
+    { question: "What was the caliber of the Scharnhorst-class battleships main armament (inches)?", answer: 11},
+
+    // Viaduct questions
+    { question: "The Welland Valley Viaduct is _66m long", answer: 11 },
+    { question: "How many millon bricks were use to construct the Ouse Valley Viaduct?", answer: 11 },
+
+    // History questions
+    { question: "In what century was gunpowder discovered?", answer: 9 },
+    { question: "Which apollo mission did Michael Collins fly?", answer: 11 },
+    { question: "How many major crusades were there?:", answer: 9 },
+    { question: "Which article of Monaco's constitution sets the state religion?", answer: 9 }
+
+    // Bible questions?
+
 ];
 
 question_count = 0
