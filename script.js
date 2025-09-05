@@ -4,11 +4,13 @@ const questions = [
     { question: "How many time zones is the US and its dependencies divided into?", answer: 9 },
     { question: "How many provinces in South Africa?", answer: 9 },
     { question: "How long is the Turkey-Azerbaijan border (miles)?", answer: 11 },
+    { question: "How many square miles is Brandenburg? (nearest 1000)", answer: 11 },
 
     // Navy questions
     { question: "How many aircraft carriers does the US Navy operate?", answer: 11 },
     { question: "How many submarines does the Royal Navy operate?", answer: 9 },
     { question: "What was the caliber of the Scharnhorst-class battleships main armament (inches)?", answer: 11},
+    { question: "How many battlecruisers did the royal navy have during the Battle of Jutland?", answer: 9 },
 
     // Viaduct questions
     { question: "The Welland Valley Viaduct is _66m long", answer: 11 },
@@ -17,10 +19,17 @@ const questions = [
     // History questions
     { question: "In what century was gunpowder discovered?", answer: 9 },
     { question: "Which apollo mission did Michael Collins fly?", answer: 11 },
-    { question: "How many major crusades were there?:", answer: 9 },
-    { question: "Which article of Monaco's constitution sets the state religion?", answer: 9 }
+    { question: "How many major crusades were there?", answer: 9 },
+    { question: "Which article of Monaco's constitution sets the state religion?", answer: 9 },
+    { question: "How many children did Oliver Cromwell have?", answer: 9 },
 
     // Bible questions?
+
+    // Random
+    { question: "Which iOS versions added the Files app?", answer: 11 },
+    { question: "Which motorway links Cambridge to London?", answer: 11 },
+    { question: "What is the Chancellor of the Exchequer's house number?", answer: 11 },
+    { question: "What caliber does the Glock 19 use (mm)?", answer: 9 }
 
 ];
 

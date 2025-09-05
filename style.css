@@ -41,7 +41,7 @@ p {
     overflow: hidden;
     margin: 16px;
     text-align: center;
-    font-size: 3rem;
+    font-size: min(3rem, 5vh);
 }
 
 #buttons {
