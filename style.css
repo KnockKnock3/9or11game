@@ -9,6 +9,7 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: #FFFDF9;
 }
 
 #container {
@@ -30,11 +31,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    justify-items: stretch
 }
 
 p {
     font-size: 1.5rem;
+    color: #2B2B2B;
 }
 
 #question_text {
@@ -42,6 +43,7 @@ p {
     margin: 16px;
     text-align: center;
     font-size: min(3rem, 5vh);
+    color: #2B2B2B;
 }
 
 #buttons {
@@ -57,7 +59,7 @@ p {
 
 .answer_button {
     background-color: #a259ff;
-    color: white;
+    color: #FFFDF9;
     border: none;
     width: max(150px, min(18vh, 18vw));
     height: max(150px, min(18vh, 18vw));
@@ -66,4 +68,37 @@ p {
     font-weight: bold;
     cursor: pointer;
     margin: 15px;
+    transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.2s ease;
+}
+
+.answer_button:hover {
+    background-color: #8a3fdc; /* slightly darker purple */
+    transform: scale(1.08);    /* grow a little */
+    box-shadow: 0 0 15px rgba(162, 89, 255, 0.6); /* glow effect */
+}
+
+.answer_button:active {
+    transform: scale(0.95);    /* shrink briefly */
+    background-color: #702bbf; /* deeper purple */
+    box-shadow: 0 0 5px rgba(162, 89, 255, 0.4);
+}
+
+@keyframes flashGreen {
+  0%   { background-color: #a259ff; }
+  20%  { background-color: #3bb33f; } /* pop + green */
+  100% { background-color: #a259ff; }
+}
+
+@keyframes flashRed {
+  0%   { background-color: #a259ff; }
+  20%  { background-color: #c93a35; } /* pop + red */
+  100% { background-color: #a259ff; }
+}
+
+.answer_button.flash-green {
+  animation: flashGreen 0.7s ease;
+}
+
+.answer_button.flash-red {
+  animation: flashRed 0.7s ease;
 }

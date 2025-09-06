@@ -3,10 +3,10 @@ const questions = [
     // Geo-politial questions
     { question: "How many countries share a border with Germany?", answer: 9 },
     { question: "How many stripes are on the Greek flag?", answer: 9 },
-    { question: "What is the population of Paris's urban area?", answer: 11 },
-    { question: "How many provinces in North Korea?", answer: 9 },
+    { question: "What is the population of Paris' urban area?", answer: 11 },
+    { question: "How many provinces are in North Korea?", answer: 9 },
     { question: "How many inhabited islands does Cape Verde have?", answer: 9 },
-    { question: "How many time zones is the US and its dependencies divided into?", answer: 9 },
+    { question: "How many time zones is the USA and its dependencies divided into?", answer: 9 },
     { question: "How long is the Turkey-Azerbaijan border (miles)?", answer: 11 },
 
     // Navy questions
@@ -19,10 +19,10 @@ const questions = [
     // Viaduct questions
     { question: "The Welland Valley Viaduct is _66m long", answer: 11 },
     { question: "How many millon bricks were use to construct the Ouse Valley Viaduct?", answer: 11 },
-    { question: "In what year was the Welland Valley Viaducts passange service resumed? (2000s)", answer: 9 },
+    { question: "In what year was the Welland Valley Viaduct's passange service resumed? (2000s)", answer: 9 },
 
     // History questions
-    { question: "In what century was gunpowder discovered?", answer: 9 },
+    { question: "In what century was gunpowder discovered? (AD)", answer: 9 },
     { question: "Which apollo mission did Michael Collins fly?", answer: 11 },
     { question: "How many major crusades were there?", answer: 9 },
     { question: "Which article of Monaco's constitution sets the state religion?", answer: 9 },
@@ -32,15 +32,15 @@ const questions = [
     { question: "In what century did Duncan I rule Scotland?", answer: 11 },
 
     // Bible questions?
-    { question: "According to Mark, on what hour of the morning was Christ crucified?", answer: 9 },
+    { question: "According to St Mark, on what hour of the morning was Christ crucified?", answer: 9 },
     { question: "How many disciples were present at The Great Commission?", answer: 11 },
     { question: "How many circles is hell depicted as in Dante's inferno?", answer: 9 },
 
     // Random
-    { question: "Which iOS versions added the Files app?", answer: 11 },
+    { question: "Which iOS version added the Files app?", answer: 11 },
     { question: "What is the Chancellor of the Exchequer's house number?", answer: 11 },
     { question: "Which caliber does the Glock 19 use (mm)?", answer: 9 },
-    { question: "What is the number of the motorway that links Cambridge to London?", answer: 11 },
+    { question: "What is the motorway number that links Cambridge to London?", answer: 11 },
 
 ];
 
@@ -50,10 +50,31 @@ questions_total = questions.length
 
 document.getElementById("question_text").innerHTML = questions[question_count].question
 
+function flashText(isCorrect) {
+    const nine_button = document.getElementById("9_button");
+    const eleven_button = document.getElementById("11_button");
+
+    nine_button.classList.remove("flash-green", "flash-red");
+    eleven_button.classList.remove("flash-green", "flash-red");
+    void nine_button.offsetWidth;
+    void eleven_button.offsetWidth;
+
+    if (isCorrect) {
+        nine_button.classList.add("flash-green");
+        eleven_button.classList.add("flash-green")
+    } else {
+        nine_button.classList.add("flash-red");
+        eleven_button.classList.add("flash-red")
+    }
+}
+
 function process_answer(answer) {
+
+    was_correct = false
 
     if (questions[question_count].answer == answer) {
         questions_correct += 1
+        was_correct = true
     }
 
     question_count += 1
@@ -69,6 +90,8 @@ function process_answer(answer) {
     document.getElementById("question_text").innerHTML = questions[question_count].question
     document.getElementById("question_number").innerHTML = "Question " + (question_count + 1)
     document.getElementById("percentage").innerHTML = Math.round(100 * questions_correct/question_count) + "%"
+
+    flashText(was_correct)
 }
 
 function nine_button_clicked() {
